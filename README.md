@@ -10,10 +10,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 Screen Snapshots
-
-|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/1.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/2.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/3.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/4.png">|
-
-|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/5.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/6.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/7.png">|<img src="https://github.com/Jowsing/XAlertView/blob/main/images/8.png">|
+| -- | -- | -- | -- | -- |
+| <img src="https://github.com/Jowsing/XAlertView/blob/main/images/1.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/2.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/3.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/4.png"> |
+| <img src="https://github.com/Jowsing/XAlertView/blob/main/images/5.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/6.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/7.png"> | <img src="https://github.com/Jowsing/XAlertView/blob/main/images/8.png"> |
 
 
 ## Requirements
