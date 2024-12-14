@@ -4,6 +4,8 @@ platform :ios, '10.0'
 
 target 'XAlertView_Example' do
   pod 'XAlertView', :path => '../'
+  pod 'SnapKit'
+  pod 'XScrollView'
 
   target 'XAlertView_Tests' do
     inherit! :search_paths

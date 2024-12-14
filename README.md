@@ -1,6 +1,6 @@
 # XAlertView
 
-[![CI Status](https://img.shields.io/travis/zhouxin/XAlertView.svg?style=flat)](https://travis-ci.org/zhouxin/XAlertView)
+[![CI Status](https://img.shields.io/travis/jowsing/XAlertView.svg?style=flat)](https://travis-ci.org/jowsing/XAlertView)
 [![Version](https://img.shields.io/cocoapods/v/XAlertView.svg?style=flat)](https://cocoapods.org/pods/XAlertView)
 [![License](https://img.shields.io/cocoapods/l/XAlertView.svg?style=flat)](https://cocoapods.org/pods/XAlertView)
 [![Platform](https://img.shields.io/cocoapods/p/XAlertView.svg?style=flat)](https://cocoapods.org/pods/XAlertView)
@@ -22,7 +22,7 @@ pod 'XAlertView'
 
 ## Author
 
-zhouxin, xinzhou@wisedu.com
+jowsing, jowsing169@gmail.com
 
 ## License
 
