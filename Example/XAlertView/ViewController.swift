@@ -79,21 +79,22 @@ class ViewController: UIViewController {
     }
     
     @objc func btnClick(sender: UIButton) {
-        let actions: [XAlertAction] = [
+        var actions: [XAlertAction] = [
             .init(title: "取消"),
             .init(title: "确定"),
         ]
         let alert: XAlertView
-        
         switch sender.tag - 2024 {
         case 0: alert = .init(title: Self.title, actions: actions)
         case 1: alert = .init(title: Self.title, msg: Self.shortMsg, actions: actions)
         case 2: alert = .init(title: Self.title, msg: Self.longMsg, actions: actions)
         case 3: alert = .init(msg: Self.longMsg, actions: actions)
         case 4: alert = .init(title: Self.title, view: customView(), actions: actions)
-        default: alert = .init(view: customView(), actions: actions)
+        default:
+            actions.append(.init(title: "Destructive", style: .destructive))
+            actions.append(.init(title: "Custom", style: .custom(color: UIColor.black, weight: .regular)))
+            alert = .init(view: customView(), actions: actions)
         }
-        
         alert.show(on: view)
     }
 

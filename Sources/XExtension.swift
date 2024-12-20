@@ -34,3 +34,10 @@ extension NSAttributedString {
         self.init(string: string, attributes: [.paragraphStyle: paragraphStyle])
     }
 }
+
+extension UIColor {
+    
+    static var lineColor: UIColor {
+        return UIColor(white: 0.2, alpha: 0.2)
+    }
+}

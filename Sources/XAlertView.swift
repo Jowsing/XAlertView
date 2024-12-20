@@ -54,7 +54,7 @@ public class XAlertView: UIView {
         return scrollView
     }()
     
-    private lazy var actionsView = UIView()
+    private lazy var actionsView = XAlertActionsView()
 
     // MARK: - Life Cycle
     
@@ -142,7 +142,8 @@ public class XAlertView: UIView {
                 } else {
                     make.top.equalTo(titleLabel.snp.bottom).offset(12)
                 }
-                make.left.right.equalTo(0)
+                make.centerX.equalToSuperview()
+                make.right.lessThanOrEqualTo(0)
             }
         case .custom(let customView):
             messageView.addArrangedSubview(customView)
@@ -158,89 +159,13 @@ public class XAlertView: UIView {
     }
     
     private func setupActions() {
-        guard !actions.isEmpty else {
-            return
+        self.actionsView.actionHandler = { [weak self] index in
+            guard let `self` = self else { return }
+            let action = self.actions[index]
+            action.handler?(action)
+            self.dismissWithAnimating()
         }
-        let line = self.newSingleLineView()
-        line.backgroundColor = .lightGray
-        actionsView.addSubview(line)
-        line.snp.makeConstraints { make in
-            make.top.equalTo(0)
-            make.left.right.equalTo(0)
-            make.height.equalTo(1)
-        }
-        var btns = [UIButton]()
-        for i in 0..<actions.count {
-            let action = actions[i]
-            let btn = UIButton()
-            btn.setTitle(action.title, for: .normal)
-            switch action.style {
-            case .default:
-                btn.setTitleColor(.systemBlue, for: .normal)
-            case .destructive:
-                btn.setTitleColor(.red, for: .normal)
-            }
-            btn.setBackgroundImage(UIImage.stretchImage(with: UIColor(white: 0.2, alpha: 0.1)), for: .highlighted)
-            btn.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
-            btn.tag = i
-            btn.addTarget(self, action: #selector(actionClick(sender:)), for: .touchUpInside)
-            actionsView.addSubview(btn)
-            btn.snp.makeConstraints { make in
-                make.height.equalTo(44)
-                if actions.count == 2 {
-                    make.top.equalTo(line.snp.bottom)
-                    make.bottom.equalTo(0)
-                    if i == 0 {
-                        make.left.equalTo(0)
-                    } else {
-                        let lineV = self.newSingleLineView()
-                        actionsView.addSubview(lineV)
-                        lineV.snp.makeConstraints { make in
-                            make.top.equalTo(line.snp.bottom)
-                            make.bottom.equalTo(0)
-                            make.width.equalTo(1)
-                            make.centerX.equalToSuperview()
-                            make.left.equalTo(btns[i - 1].snp.right)
-                        }
-                        make.left.equalTo(lineV.snp.right)
-                        make.right.equalTo(0)
-                    }
-                } else {
-                    make.left.right.equalTo(0)
-                    if i == 0 {
-                        make.top.equalTo(line.snp.bottom)
-                    } else {
-                        let lineH = self.newSingleLineView()
-                        actionsView.addSubview(lineH)
-                        lineH.snp.makeConstraints { make in
-                            make.top.equalTo(btns[i - 1].snp.bottom)
-                            make.height.equalTo(1)
-                            make.left.right.equalTo(0)
-                        }
-                        make.top.equalTo(lineH.snp.bottom)
-                    }
-                    if i == actions.count - 1 {
-                        make.bottom.equalTo(0)
-                    }
-                }
-            }
-            btns.append(btn)
-        }
-    }
-    
-    private func newSingleLineView() -> UIView {
-        let lineView = UIView()
-        lineView.backgroundColor = .lightGray
-        return lineView
-    }
-    
-    
-    // MARK: - Actions
-    
-    @objc private func actionClick(sender: UIButton) {
-        let action = self.actions[sender.tag]
-        action.handler?(action)
-        self.dismissWithAnimating()
+        self.actionsView.addActions(self.actions)
     }
     
     // MARK: - Animations

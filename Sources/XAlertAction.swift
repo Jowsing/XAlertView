@@ -9,11 +9,13 @@ import Foundation
 
 public class XAlertAction {
     
-    public enum Style : Int {
+    public enum Style {
 
-        case `default` = 0
+        case `default`
 
-        case destructive = 2
+        case destructive
+        
+        case custom(color: UIColor, weight: UIFont.Weight = .medium)
     }
     
     let style: Style
@@ -22,9 +24,9 @@ public class XAlertAction {
     
     let handler: ((XAlertAction) -> Void)?
     
-    public init(style: Style = .default, title: String, handler: ((XAlertAction) -> Void)? = nil) {
-        self.style = style
+    public init(title: String, style: Style = .default, handler: ((XAlertAction) -> Void)? = nil) {
         self.title = title
+        self.style = style
         self.handler = handler
     }
 }
