@@ -11,11 +11,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Screen Snapshots
 
-| ![](https://github.com/Jowsing/XAlertView/blob/main/images/1.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/2.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/3.png)  | ![](https://github.com/Jowsing/XAlertView/blob/main/images/4.png) |
-| ------------- | ------------- | ------------- | ------------- |
+| ![](https://github.com/Jowsing/XAlertView/blob/main/images/1.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/2.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/3.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/4.png) |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 
-| ![](https://github.com/Jowsing/XAlertView/blob/main/images/5.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/6.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/7.png)  | ![](https://github.com/Jowsing/XAlertView/blob/main/images/8.png) |
-| ------------- | ------------- | ------------- | ------------- |
+
+| ![](https://github.com/Jowsing/XAlertView/blob/main/images/5.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/6.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/7.png) | ![](https://github.com/Jowsing/XAlertView/blob/main/images/8.png) |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 
 
 ## Requirements
